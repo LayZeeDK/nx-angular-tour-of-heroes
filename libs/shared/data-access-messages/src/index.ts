@@ -1,1 +1,1 @@
-export * from './lib/shared-data-access-messages.module';
+export * from './lib/message.service';

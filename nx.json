@@ -23,6 +23,9 @@
     "heroes-feature-page": {
       "tags": ["scope:heroes", "type:feature"]
     },
+    "shared-data-access-messages": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
     "tour-of-heroes-app": {
       "tags": []
     }

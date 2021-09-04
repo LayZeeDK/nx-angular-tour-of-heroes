@@ -1,1 +1,1 @@
-export * from './lib/shared-data-access-navigation.module';
+export * from './lib/can-deactivate.guard';

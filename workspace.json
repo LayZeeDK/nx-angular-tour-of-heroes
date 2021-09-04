@@ -1,11 +1,10 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 2,
   "newProjectRoot": "projects",
   "projects": {
     "tour-of-heroes-app": {
       "projectType": "application",
-      "schematics": {
+      "generators": {
         "@schematics/angular:application": {
           "strict": true
         }
@@ -13,9 +12,9 @@
       "root": "apps/tour-of-heroes-app",
       "sourceRoot": "apps/tour-of-heroes-app/src",
       "prefix": "app",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/tour-of-heroes-app",
             "index": "apps/tour-of-heroes-app/src/index.html",
@@ -26,9 +25,7 @@
               "apps/tour-of-heroes-app/src/favicon.ico",
               "apps/tour-of-heroes-app/src/assets"
             ],
-            "styles": [
-              "apps/tour-of-heroes-app/src/styles.css"
-            ],
+            "styles": ["apps/tour-of-heroes-app/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -65,7 +62,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "tour-of-heroes-app:build:production"
@@ -77,13 +74,13 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "tour-of-heroes-app:build"
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "executor": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "apps/tour-of-heroes-app/src/test.ts",
             "polyfills": "apps/tour-of-heroes-app/src/polyfills.ts",
@@ -93,9 +90,7 @@
               "apps/tour-of-heroes-app/src/favicon.ico",
               "apps/tour-of-heroes-app/src/assets"
             ],
-            "styles": [
-              "apps/tour-of-heroes-app/src/styles.css"
-            ],
+            "styles": ["apps/tour-of-heroes-app/src/styles.css"],
             "scripts": []
           }
         }

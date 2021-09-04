@@ -67,6 +67,22 @@
         }
       }
     },
+    "shared-data-access-navigation": {
+      "projectType": "library",
+      "root": "libs/shared/data-access-navigation",
+      "sourceRoot": "libs/shared/data-access-navigation/src",
+      "prefix": "tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/shared/data-access-navigation/src/test.ts",
+            "tsConfig": "libs/shared/data-access-navigation/tsconfig.spec.json",
+            "karmaConfig": "libs/shared/data-access-navigation/karma.conf.js"
+          }
+        }
+      }
+    },
     "shared-ui-dialogs": {
       "projectType": "library",
       "root": "libs/shared/ui-dialogs",

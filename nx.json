@@ -20,6 +20,9 @@
     }
   },
   "projects": {
+    "heroes-feature-page": {
+      "tags": ["scope:heroes", "type:feature"]
+    },
     "tour-of-heroes-app": {
       "tags": []
     }

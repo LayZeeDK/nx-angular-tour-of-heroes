@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-
+import { MessageService } from '@tour-of-heroes/shared/data-access-messages';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
-import { MessageService } from '../message.service';
 
 @Injectable({
   providedIn: 'root',

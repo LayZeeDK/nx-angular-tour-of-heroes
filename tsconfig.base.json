@@ -17,6 +17,9 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
+      "@tour-of-heroes/crisis-center/feature-page": [
+        "libs/crisis-center/feature-page/src/index.ts"
+      ],
       "@tour-of-heroes/heroes/feature-page": [
         "libs/heroes/feature-page/src/index.ts"
       ],

@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "newProjectRoot": "projects",
   "projects": {
     "tour-of-heroes-app": {
       "projectType": "application",

@@ -20,6 +20,9 @@
     }
   },
   "projects": {
+    "admin-feature-page": {
+      "tags": ["scope:admin", "type:feature"]
+    },
     "crisis-center-feature-page": {
       "tags": ["scope:crisis-center", "type:feature"]
     },

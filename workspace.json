@@ -36,6 +36,22 @@
         }
       }
     },
+    "auth-feature-login-page": {
+      "projectType": "library",
+      "root": "libs/auth/feature-login-page",
+      "sourceRoot": "libs/auth/feature-login-page/src",
+      "prefix": "tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/auth/feature-login-page/src/test.ts",
+            "tsConfig": "libs/auth/feature-login-page/tsconfig.spec.json",
+            "karmaConfig": "libs/auth/feature-login-page/karma.conf.js"
+          }
+        }
+      }
+    },
     "crisis-center-feature-page": {
       "projectType": "library",
       "root": "libs/crisis-center/feature-page",

@@ -23,6 +23,9 @@
     "admin-feature-page": {
       "tags": ["scope:admin", "type:feature"]
     },
+    "auth-feature-login-page": {
+      "tags": ["scope:auth", "type:feature"]
+    },
     "crisis-center-feature-page": {
       "tags": ["scope:crisis-center", "type:feature"]
     },

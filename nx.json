@@ -35,6 +35,9 @@
     "shared-data-access-navigation": {
       "tags": ["scope:shared", "type:data-access"]
     },
+    "shared-data-access-security": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
     "shared-ui-dialogs": {
       "tags": ["scope:shared", "type:ui"]
     },

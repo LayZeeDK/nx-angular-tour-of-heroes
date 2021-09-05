@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
+import { AuthFeatureLoginPageModule } from '@tour-of-heroes/auth/feature-login-page';
 import { HeroesFeaturePageModule } from '@tour-of-heroes/heroes/feature-page';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -17,7 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserAnimationsModule,
     FormsModule,
     HeroesFeaturePageModule,
-    AuthModule,
+    AuthFeatureLoginPageModule,
     AppRoutingModule,
   ],
   declarations: [AppComponent, ComposeMessageComponent, PageNotFoundComponent],

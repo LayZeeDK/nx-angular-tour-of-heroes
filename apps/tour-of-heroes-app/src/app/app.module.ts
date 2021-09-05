@@ -5,10 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
 import { AuthFeatureLoginPageModule } from '@tour-of-heroes/auth/feature-login-page';
 import { HeroesFeaturePageModule } from '@tour-of-heroes/heroes/feature-page';
+import { ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComposeMessageModule } from './compose-message/compose-message.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({

@@ -15,7 +15,9 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     loadChildren: () =>
-      import('./admin/admin.module').then((m) => m.AdminModule),
+      import('@tour-of-heroes/admin/feature-page').then(
+        (m) => m.AdminFeaturePageModule
+      ),
     canLoad: [AuthGuard],
   },
   {

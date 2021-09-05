@@ -8,7 +8,7 @@ import { HeroesFeaturePageModule } from '@tour-of-heroes/heroes/feature-page';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { ComposeMessageModule } from './compose-message/compose-message.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -19,8 +19,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeroesFeaturePageModule,
     AuthFeatureLoginPageModule,
     AppRoutingModule,
+    ComposeMessageModule,
   ],
-  declarations: [AppComponent, ComposeMessageComponent, PageNotFoundComponent],
+  declarations: [AppComponent, PageNotFoundComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {

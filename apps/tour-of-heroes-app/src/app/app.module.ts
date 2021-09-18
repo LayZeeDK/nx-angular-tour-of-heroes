@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
 
@@ -7,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [BrowserAnimationsModule, FormsModule, AppRoutingModule],
-  declarations: [AppComponent],
   bootstrap: [AppComponent],
+  declarations: [AppComponent],
+  imports: [BrowserAnimationsModule, AppRoutingModule],
 })
 export class AppModule {
   // Diagnostic only: inspect router configuration

@@ -1,27 +1,13 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
-import { AuthFeatureLoginPageModule } from '@tour-of-heroes/auth/feature-login-page';
-import { HeroesFeaturePageModule } from '@tour-of-heroes/heroes/feature-page';
-import { ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
-import { PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HeroesFeaturePageModule,
-    AuthFeatureLoginPageModule,
-    AppRoutingModule,
-    ComposeMessageModule,
-    PageNotFoundModule,
-  ],
+  imports: [BrowserAnimationsModule, FormsModule, AppRoutingModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

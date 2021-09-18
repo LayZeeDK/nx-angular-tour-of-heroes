@@ -40,6 +40,9 @@
       ],
       "@tour-of-heroes/shared/ui-dialogs": [
         "libs/shared/ui-dialogs/src/index.ts"
+      ],
+      "@tour-of-heroes/shared/ui-navigation": [
+        "libs/shared/ui-navigation/src/index.ts"
       ]
     },
     "rootDir": "."

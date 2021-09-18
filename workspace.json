@@ -147,6 +147,22 @@
         }
       }
     },
+    "shared-ui-navigation": {
+      "projectType": "library",
+      "root": "libs/shared/ui-navigation",
+      "sourceRoot": "libs/shared/ui-navigation/src",
+      "prefix": "tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/shared/ui-navigation/src/test.ts",
+            "tsConfig": "libs/shared/ui-navigation/tsconfig.spec.json",
+            "karmaConfig": "libs/shared/ui-navigation/karma.conf.js"
+          }
+        }
+      }
+    },
     "tour-of-heroes-app": {
       "projectType": "application",
       "generators": {

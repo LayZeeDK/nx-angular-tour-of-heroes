@@ -44,6 +44,9 @@
     "shared-ui-dialogs": {
       "tags": ["scope:shared", "type:ui"]
     },
+    "shared-ui-navigation": {
+      "tags": ["scope:shared", "type:ui"]
+    },
     "tour-of-heroes-app": {
       "tags": []
     }

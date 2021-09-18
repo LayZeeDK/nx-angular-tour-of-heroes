@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
 import { AuthFeatureLoginPageModule } from '@tour-of-heroes/auth/feature-login-page';
 import { HeroesFeaturePageModule } from '@tour-of-heroes/heroes/feature-page';
 import { ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
+import { PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -20,8 +20,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AuthFeatureLoginPageModule,
     AppRoutingModule,
     ComposeMessageModule,
+    PageNotFoundModule,
   ],
-  declarations: [AppComponent, PageNotFoundComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {

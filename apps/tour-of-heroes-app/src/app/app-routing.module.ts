@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SelectivePreloadingStrategyService } from '@tour-of-heroes/shared/data-access-navigation';
 import { AuthGuard } from '@tour-of-heroes/shared/data-access-security';
 import { ComposeMessageComponent } from '@tour-of-heroes/shared/ui-dialogs';
-
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from '@tour-of-heroes/shared/ui-navigation';
 
 const appRoutes: Routes = [
   {

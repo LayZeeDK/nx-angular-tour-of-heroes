@@ -68,6 +68,22 @@
         }
       }
     },
+    "crisis-center-feature-shell": {
+      "projectType": "library",
+      "root": "libs/crisis-center/feature-shell",
+      "sourceRoot": "libs/crisis-center/feature-shell/src",
+      "prefix": "tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/crisis-center/feature-shell/src/test.ts",
+            "tsConfig": "libs/crisis-center/feature-shell/tsconfig.spec.json",
+            "karmaConfig": "libs/crisis-center/feature-shell/karma.conf.js"
+          }
+        }
+      }
+    },
     "heroes-feature-page": {
       "projectType": "library",
       "root": "libs/heroes/feature-page",

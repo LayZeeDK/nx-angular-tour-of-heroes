@@ -29,6 +29,9 @@
     "crisis-center-feature-page": {
       "tags": ["scope:crisis-center", "type:feature"]
     },
+    "crisis-center-feature-shell": {
+      "tags": ["scope:crisis-center", "type:feature"]
+    },
     "heroes-feature-page": {
       "tags": ["scope:heroes", "type:feature"]
     },

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CrisisService } from '@tour-of-heroes/crisis-center/data-access';
 import { Crisis } from '@tour-of-heroes/crisis-center/domain';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-
-import { CrisisService } from '../crisis.service';
 
 @Component({
   selector: 'app-crisis-list',

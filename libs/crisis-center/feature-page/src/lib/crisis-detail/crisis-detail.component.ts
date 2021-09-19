@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Crisis } from '@tour-of-heroes/crisis-center/domain';
 import { DialogService } from '@tour-of-heroes/shared/ui-dialogs';
 import { Observable } from 'rxjs';
-
-import { Crisis } from '../crisis';
 
 @Component({
   selector: 'app-crisis-detail',

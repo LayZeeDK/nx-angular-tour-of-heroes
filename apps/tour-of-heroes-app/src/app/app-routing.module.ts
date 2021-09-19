@@ -24,8 +24,8 @@ const appRoutes: Routes = [
   {
     path: 'crisis-center',
     loadChildren: () =>
-      import('@tour-of-heroes/crisis-center/feature-page').then(
-        (m) => m.CrisisCenterFeaturePageModule
+      import('@tour-of-heroes/crisis-center/feature-shell').then(
+        (m) => m.CrisisCenterFeatureShellModule
       ),
     data: { preload: true },
   },

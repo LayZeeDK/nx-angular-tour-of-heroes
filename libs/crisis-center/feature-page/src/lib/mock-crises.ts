@@ -1,4 +1,4 @@
-import { Crisis } from './crisis';
+import { Crisis } from '@tour-of-heroes/crisis-center/domain';
 
 export const CRISES: Crisis[] = [
   { id: 1, name: 'Dragon Burning Cities' },

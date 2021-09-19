@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Crisis } from '@tour-of-heroes/crisis-center/domain';
 import { MessageService } from '@tour-of-heroes/shared/data-access-messages';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Crisis } from './crisis';
 import { CRISES } from './mock-crises';
 
 @Injectable({

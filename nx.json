@@ -30,7 +30,7 @@
       "tags": ["scope:crisis-center", "type:data-access"]
     },
     "crisis-center-domain": {
-      "tags": ["scope:crisis-center"]
+      "tags": ["scope:crisis-center", "type:domain"]
     },
     "crisis-center-feature-list": {
       "tags": ["scope:crisis-center", "type:feature"]
@@ -60,7 +60,7 @@
       "tags": ["scope:shared", "type:ui"]
     },
     "tour-of-heroes-app": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes-app", "type:app"]
     }
   }
 }

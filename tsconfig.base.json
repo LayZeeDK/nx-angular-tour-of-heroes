@@ -23,6 +23,9 @@
       "@tour-of-heroes/auth/feature-login-page": [
         "libs/auth/feature-login-page/src/index.ts"
       ],
+      "@tour-of-heroes/crisis-center/domain": [
+        "libs/crisis-center/domain/src/index.ts"
+      ],
       "@tour-of-heroes/crisis-center/feature-list": [
         "libs/crisis-center/feature-list/src/index.ts"
       ],

@@ -6,6 +6,7 @@ import {
   CrisisCenterHomeModule,
   CrisisDetailComponent,
   CrisisDetailModule,
+  CrisisDetailResolverService,
   CrisisListComponent,
 } from '@tour-of-heroes/crisis-center/feature-list';
 import { CanDeactivateGuard } from '@tour-of-heroes/shared/data-access-navigation';

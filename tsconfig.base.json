@@ -32,9 +32,6 @@
       "@tour-of-heroes/crisis-center/feature-list": [
         "libs/crisis-center/feature-list/src/index.ts"
       ],
-      "@tour-of-heroes/crisis-center/feature-page": [
-        "libs/crisis-center/feature-page/src/index.ts"
-      ],
       "@tour-of-heroes/crisis-center/feature-shell": [
         "libs/crisis-center/feature-shell/src/index.ts"
       ],

@@ -35,9 +35,6 @@
     "crisis-center-feature-list": {
       "tags": ["scope:crisis-center", "type:feature"]
     },
-    "crisis-center-feature-page": {
-      "tags": ["scope:crisis-center", "type:feature"]
-    },
     "crisis-center-feature-shell": {
       "tags": ["scope:crisis-center", "type:feature"]
     },

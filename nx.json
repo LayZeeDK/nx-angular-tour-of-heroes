@@ -26,6 +26,9 @@
     "auth-feature-login-page": {
       "tags": ["scope:auth", "type:feature"]
     },
+    "crisis-center-feature-list": {
+      "tags": ["scope:crisis-center", "type:feature"]
+    },
     "crisis-center-feature-page": {
       "tags": ["scope:crisis-center", "type:feature"]
     },

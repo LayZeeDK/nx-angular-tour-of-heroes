@@ -32,6 +32,9 @@
     "crisis-center-domain": {
       "tags": ["scope:crisis-center", "type:domain"]
     },
+    "crisis-center-feature-home": {
+      "tags": ["scope:crisis-center", "type:feature"]
+    },
     "crisis-center-feature-list": {
       "tags": ["scope:crisis-center", "type:feature"]
     },

@@ -29,6 +29,9 @@
       "@tour-of-heroes/crisis-center/domain": [
         "libs/crisis-center/domain/src/index.ts"
       ],
+      "@tour-of-heroes/crisis-center/feature-detail": [
+        "libs/crisis-center/feature-detail/src/index.ts"
+      ],
       "@tour-of-heroes/crisis-center/feature-home": [
         "libs/crisis-center/feature-home/src/index.ts"
       ],

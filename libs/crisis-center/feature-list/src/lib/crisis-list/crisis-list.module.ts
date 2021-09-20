@@ -6,6 +6,7 @@ import { CrisisListComponent } from './crisis-list.component';
 
 @NgModule({
   declarations: [CrisisListComponent],
+  exports: [CrisisListComponent],
   imports: [CommonModule, RouterModule],
 })
 export class CrisisListModule {}

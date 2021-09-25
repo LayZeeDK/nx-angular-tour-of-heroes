@@ -38,6 +38,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {
       enableTracing: false, // <-- debugging purposes only
       preloadingStrategy: SelectivePreloadingStrategyService,
+      initialNavigation: 'enabledNonBlocking',
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
     }),
     HeroesFeaturePageModule,
     AuthFeatureLoginPageModule,

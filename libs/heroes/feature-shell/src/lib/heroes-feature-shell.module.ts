@@ -7,6 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: HeroesComponent,
+    children: [
+      {
+        path: ':id',
+        loadChildren: () =>
+          import('@tour-of-heroes/heroes/feature-detail').then(
+            (m) => m.HeroesFeatureDetailModule
+          ),
+      },
+    ],
   },
 ];
 

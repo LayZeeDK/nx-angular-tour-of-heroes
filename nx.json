@@ -4,12 +4,12 @@
     "defaultBase": "main"
   },
   "implicitDependencies": {
-    "angular.json": "*",
     "package.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*",
-    "tsconfig.base.json": "*"
+    "tsconfig.base.json": "*",
+    "workspace.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {

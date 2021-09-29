@@ -32,7 +32,6 @@
     "heroes-domain": "libs\\heroes\\domain",
     "heroes-feature-detail": "libs/heroes/feature-detail",
     "heroes-feature-list": "libs/heroes/feature-list",
-    "heroes-feature-page": "libs/heroes/feature-page",
     "heroes-feature-shell": "libs/heroes/feature-shell",
     "shared-data-access-messages": "libs/shared/data-access-messages",
     "shared-data-access-navigation": "libs/shared/data-access-navigation",

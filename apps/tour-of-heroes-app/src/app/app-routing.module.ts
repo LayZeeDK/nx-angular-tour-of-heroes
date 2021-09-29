@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthFeatureLoginPageModule } from '@tour-of-heroes/auth/feature-login-page';
-import { HeroesFeaturePageModule } from '@tour-of-heroes/heroes/feature-page';
 import { SelectivePreloadingStrategyService } from '@tour-of-heroes/shared/data-access-navigation';
 import { AuthGuard } from '@tour-of-heroes/shared/data-access-security';
 import { ComposeMessageComponent, ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
@@ -49,7 +48,6 @@ const appRoutes: Routes = [
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
     }),
-    HeroesFeaturePageModule,
     AuthFeatureLoginPageModule,
     ComposeMessageModule,
     PageNotFoundModule,

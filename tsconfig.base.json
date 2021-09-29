@@ -51,9 +51,6 @@
       "@tour-of-heroes/heroes/feature-list": [
         "libs/heroes/feature-list/src/index.ts"
       ],
-      "@tour-of-heroes/heroes/feature-page": [
-        "libs/heroes/feature-page/src/index.ts"
-      ],
       "@tour-of-heroes/heroes/feature-shell": [
         "libs/heroes/feature-shell/src/index.ts"
       ],

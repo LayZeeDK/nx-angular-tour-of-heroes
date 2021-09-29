@@ -3,6 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HeroesComponent, HeroesScam } from './heroes/heroes.component';
 
+const heroesRoutes: Routes = [
+  { path: 'heroes', redirectTo: '/superheroes' },
+  { path: 'hero/:id', redirectTo: '/superhero/:id' },
+  {
+    path: 'superheroes',
+    component: HeroListComponent,
+    data: { animation: 'heroes' },
+  },
+];
+
 const routes: Routes = [
   {
     path: '',
@@ -17,7 +27,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: ':id',
+        path: 'superhero',
         loadChildren: () =>
           import('@tour-of-heroes/heroes/feature-detail').then(
             (m) => m.HeroesFeatureDetailModule

@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     data: { preload: true },
   },
   {
-    path: 'heroez',
+    path: 'superhero',
     loadChildren: () =>
       import('@tour-of-heroes/heroes/feature-shell').then(
         (esModule) => esModule.HeroesFeatureShellModule

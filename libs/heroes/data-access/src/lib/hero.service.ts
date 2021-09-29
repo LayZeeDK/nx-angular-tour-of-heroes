@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Hero } from '@tour-of-heroes/heroes/domain';
 import { MessageService } from '@tour-of-heroes/shared/data-access-messages';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HeroService {
-
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService) {}
 
   getHeroes(): Observable<Hero[]> {
     // TODO: send the message _after_ fetching the heroes
@@ -22,8 +21,7 @@ export class HeroService {
   getHero(id: number | string) {
     return this.getHeroes().pipe(
       // (+) before `id` turns the string into a number
-      map((heroes: Hero[]) => heroes.find(hero => hero.id === +id)!)
+      map((heroes: Hero[]) => heroes.find((hero) => hero.id === +id)!)
     );
   }
 }
-

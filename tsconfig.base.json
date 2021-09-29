@@ -41,6 +41,9 @@
       "@tour-of-heroes/crisis-center/feature-shell": [
         "libs/crisis-center/feature-shell/src/index.ts"
       ],
+      "@tour-of-heroes/heroes/data-access": [
+        "libs/heroes/data-access/src/index.ts"
+      ],
       "@tour-of-heroes/heroes/feature-detail": [
         "libs/heroes/feature-detail/src/index.ts"
       ],

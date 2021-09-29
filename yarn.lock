@@ -1640,17 +1640,6 @@
     yargs "15.4.1"
     yargs-parser "20.0.0"
 
-"@nrwl/cli@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-12.8.0.tgz#51527fbabe3248cf4f910329e472665728312064"
-  integrity sha512-QUIICAXPeWfsM8EMIavdjGHmLFrDoSQEjXC0PiAZqiR9prcqp4jOWOZ/J1CTQfpAyINgjYoBQo+ao+YC7jX5Sw==
-  dependencies:
-    "@nrwl/tao" "12.8.0"
-    chalk "4.1.0"
-    v8-compile-cache "2.3.0"
-    yargs "15.4.1"
-    yargs-parser "20.0.0"
-
 "@nrwl/cypress@12.9.0":
   version "12.9.0"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-12.9.0.tgz#7e451569b53764b5aa5160d428de8d29d7c6725e"
@@ -1669,18 +1658,6 @@
     webpack-node-externals "1.7.2"
     yargs-parser "20.0.0"
 
-"@nrwl/devkit@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.8.0.tgz#7bdce01d8ee39b206e503ca18c3223fd424515e7"
-  integrity sha512-V35yxBM5yyahsFzwCGRwNNzHfh698UsWUJAgeGPUJLYN4y8LCrKxiRvVlRCPgkjd46P2SuClJx6NjEm2DRoQ9Q==
-  dependencies:
-    "@nrwl/tao" "12.8.0"
-    ejs "^3.1.5"
-    ignore "^5.0.4"
-    rxjs "^6.5.4"
-    semver "7.3.4"
-    tslib "^2.0.0"
-
 "@nrwl/devkit@12.9.0":
   version "12.9.0"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.9.0.tgz#fbf6eb715d1deb22fa919bceb3dff7a5c990d415"
@@ -1691,22 +1668,6 @@
     ignore "^5.0.4"
     rxjs "^6.5.4"
     semver "7.3.4"
-    tslib "^2.0.0"
-
-"@nrwl/jest@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-12.8.0.tgz#65ab4844bdc07bac1faaa444403ad29c9f294da6"
-  integrity sha512-ATqhv6K/1+hFMLUKoG4lhn2a4FS3iDJOCenP4T9YAiYJQ2tIc+g9bh2agM3EW2EeSP7fHm2zeCdvprd4sJG6DQ==
-  dependencies:
-    "@jest/reporters" "27.0.6"
-    "@jest/test-result" "27.0.6"
-    "@nrwl/devkit" "12.8.0"
-    chalk "4.1.0"
-    identity-obj-proxy "3.0.0"
-    jest-config "27.0.6"
-    jest-resolve "27.0.6"
-    jest-util "27.0.6"
-    rxjs "^6.5.4"
     tslib "^2.0.0"
 
 "@nrwl/jest@12.9.0":
@@ -1723,17 +1684,6 @@
     jest-resolve "27.0.6"
     jest-util "27.0.6"
     rxjs "^6.5.4"
-    tslib "^2.0.0"
-
-"@nrwl/linter@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-12.8.0.tgz#6f6c6192a19bb7ab7020576465871372a77459c7"
-  integrity sha512-8FJwa5Fj3qlWfJoCTq1rccCBicgSfJXA+FKfkm1fT3hvriJuMlC3hMXXKuB9WGdJMIxs2X7OEzR8mMgwH77V/Q==
-  dependencies:
-    "@nrwl/devkit" "12.8.0"
-    glob "7.1.4"
-    minimatch "3.0.4"
-    tmp "~0.2.1"
     tslib "^2.0.0"
 
 "@nrwl/linter@12.9.0":
@@ -1762,22 +1712,6 @@
     ts-loader "5.4.5"
     tsconfig-paths-webpack-plugin "3.4.1"
 
-"@nrwl/tao@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.8.0.tgz#fafbcf1885c8405df92e18633407add9d56c07d0"
-  integrity sha512-AspbhwKvuPbWqRGJIt13VIhL/D+73QhQQ6z94osfCaXfEmkMDjHJ8KUfxdVOYYLuRtE+cqeLMDZWPmBgfzbXtA==
-  dependencies:
-    chalk "4.1.0"
-    enquirer "~2.3.6"
-    fs-extra "^9.1.0"
-    jsonc-parser "3.0.0"
-    rxjs "^6.5.4"
-    rxjs-for-await "0.0.2"
-    semver "7.3.4"
-    tmp "~0.2.1"
-    tslib "^2.0.0"
-    yargs-parser "20.0.0"
-
 "@nrwl/tao@12.9.0":
   version "12.9.0"
   resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.9.0.tgz#f8470ac0dccd5df414afc244fbbf37c23eb75764"
@@ -1793,34 +1727,6 @@
     semver "7.3.4"
     tmp "~0.2.1"
     tslib "^2.0.0"
-    yargs-parser "20.0.0"
-
-"@nrwl/workspace@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/workspace/-/workspace-12.8.0.tgz#fb2a79a803e94dbc49365670f147cea6ef9f98a6"
-  integrity sha512-L/PHZze29pqosfCHQg0AuUG9QpDLROAcl8gdhYiRMrx4jbrox2nGHWE+lpICX3VVtbFJP6W9iQoFzGBvoCXu6A==
-  dependencies:
-    "@nrwl/cli" "12.8.0"
-    "@nrwl/devkit" "12.8.0"
-    "@nrwl/jest" "12.8.0"
-    "@nrwl/linter" "12.8.0"
-    chalk "4.1.0"
-    chokidar "^3.5.1"
-    cosmiconfig "^4.0.0"
-    dotenv "~10.0.0"
-    enquirer "~2.3.6"
-    flat "^5.0.2"
-    fs-extra "^9.1.0"
-    glob "7.1.4"
-    ignore "^5.0.4"
-    minimatch "3.0.4"
-    npm-run-all "^4.1.5"
-    open "^7.4.2"
-    rxjs "^6.5.4"
-    semver "7.3.4"
-    tmp "~0.2.1"
-    tslib "^2.0.0"
-    yargs "15.4.1"
     yargs-parser "20.0.0"
 
 "@nrwl/workspace@12.9.0":

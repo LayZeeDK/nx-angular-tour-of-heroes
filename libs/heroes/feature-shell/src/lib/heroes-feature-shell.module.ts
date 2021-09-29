@@ -9,6 +9,14 @@ const routes: Routes = [
     component: HeroesComponent,
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        loadChildren: () =>
+          import('@tour-of-heroes/heroes/feature-list').then(
+            (m) => m.HeroesFeatureListModule
+          ),
+      },
+      {
         path: ':id',
         loadChildren: () =>
           import('@tour-of-heroes/heroes/feature-detail').then(

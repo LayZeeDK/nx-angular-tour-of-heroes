@@ -8,6 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: HeroListComponent,
+    data: { animation: 'heroes' },
   },
 ];
 

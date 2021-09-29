@@ -41,6 +41,14 @@ const appRoutes: Routes = [
     path: 'superhero',
     loadChildren: loadHeroesFeatureShell,
   },
+  {
+    path: 'heroes',
+    loadChildren: loadHeroesFeatureShell,
+  },
+  {
+    path: 'superheroes',
+    loadChildren: loadHeroesFeatureShell,
+  },
   { path: '', redirectTo: '/superheroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

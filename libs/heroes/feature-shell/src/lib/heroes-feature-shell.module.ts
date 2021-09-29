@@ -3,16 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HeroesComponent, HeroesScam } from './heroes/heroes.component';
 
-const heroesRoutes: Routes = [
-  { path: 'heroes', redirectTo: '/superheroes' },
-
-  {
-    path: 'superheroes',
-    component: HeroListComponent,
-    data: { animation: 'heroes' },
-  },
-];
-
 const routes: Routes = [
   {
     path: '',
@@ -32,6 +22,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('@tour-of-heroes/heroes/feature-detail').then(
             (m) => m.HeroesFeatureDetailModule
+          ),
+      },
+      { path: 'heroes', redirectTo: 'superheroes' },
+      {
+        path: 'superheroes',
+        loadChildren: () =>
+          import('@tour-of-heroes/heroes/feature-list').then(
+            (esModule) => esModule.HeroesFeatureListModule
           ),
       },
     ],

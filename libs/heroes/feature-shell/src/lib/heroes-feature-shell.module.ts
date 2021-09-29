@@ -9,27 +9,17 @@ const routes: Routes = [
     component: HeroesComponent,
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        loadChildren: () =>
-          import('@tour-of-heroes/heroes/feature-list').then(
-            (m) => m.HeroesFeatureListModule
-          ),
-      },
-      { path: 'hero', redirectTo: 'superhero' },
-      {
-        path: 'superhero',
+        path: ':id',
         loadChildren: () =>
           import('@tour-of-heroes/heroes/feature-detail').then(
             (m) => m.HeroesFeatureDetailModule
           ),
       },
-      { path: 'heroes', redirectTo: 'superheroes' },
       {
-        path: 'superheroes',
+        path: '',
         loadChildren: () =>
           import('@tour-of-heroes/heroes/feature-list').then(
-            (esModule) => esModule.HeroesFeatureListModule
+            (m) => m.HeroesFeatureListModule
           ),
       },
     ],

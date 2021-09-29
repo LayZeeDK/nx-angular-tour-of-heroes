@@ -33,20 +33,11 @@ const appRoutes: Routes = [
       ),
     data: { preload: true },
   },
-  {
-    path: 'hero',
-    loadChildren: loadHeroesFeatureShell,
-  },
+  { path: 'heroes', redirectTo: 'superheroes' },
+  { path: 'superheroes', loadChildren: loadHeroesFeatureShell },
+  { path: 'hero', redirectTo: 'superhero' },
   {
     path: 'superhero',
-    loadChildren: loadHeroesFeatureShell,
-  },
-  {
-    path: 'heroes',
-    loadChildren: loadHeroesFeatureShell,
-  },
-  {
-    path: 'superheroes',
     loadChildren: loadHeroesFeatureShell,
   },
   { path: '', redirectTo: '/superheroes', pathMatch: 'full' },
@@ -61,6 +52,7 @@ const appRoutes: Routes = [
       initialNavigation: 'enabledNonBlocking',
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
+      paramsInheritanceStrategy: 'always',
     }),
     AuthFeatureLoginPageModule,
     ComposeMessageModule,

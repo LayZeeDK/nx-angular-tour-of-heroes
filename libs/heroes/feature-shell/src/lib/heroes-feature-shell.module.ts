@@ -5,7 +5,7 @@ import { HeroesComponent, HeroesScam } from './heroes/heroes.component';
 
 const heroesRoutes: Routes = [
   { path: 'heroes', redirectTo: '/superheroes' },
-  { path: 'hero/:id', redirectTo: '/superhero/:id' },
+
   {
     path: 'superheroes',
     component: HeroListComponent,
@@ -26,6 +26,7 @@ const routes: Routes = [
             (m) => m.HeroesFeatureListModule
           ),
       },
+      { path: 'hero', redirectTo: 'superhero' },
       {
         path: 'superhero',
         loadChildren: () =>

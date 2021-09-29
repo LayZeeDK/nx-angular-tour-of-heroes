@@ -6,6 +6,11 @@ import { AuthGuard } from '@tour-of-heroes/shared/data-access-security';
 import { ComposeMessageComponent, ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
 import { PageNotFoundComponent, PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
 
+const loadHeroesFeatureShell = () =>
+  import('@tour-of-heroes/heroes/feature-shell').then(
+    (esModule) => esModule.HeroesFeatureShellModule
+  );
+
 const appRoutes: Routes = [
   {
     path: 'compose',
@@ -29,11 +34,12 @@ const appRoutes: Routes = [
     data: { preload: true },
   },
   {
+    path: 'hero',
+    loadChildren: loadHeroesFeatureShell,
+  },
+  {
     path: 'superhero',
-    loadChildren: () =>
-      import('@tour-of-heroes/heroes/feature-shell').then(
-        (esModule) => esModule.HeroesFeatureShellModule
-      ),
+    loadChildren: loadHeroesFeatureShell,
   },
   { path: '', redirectTo: '/superheroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

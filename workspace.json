@@ -20,22 +20,7 @@
     "@nrwl/angular:component": {}
   },
   "projects": {
-    "admin-feature-page": {
-      "projectType": "library",
-      "root": "libs/admin/feature-page",
-      "sourceRoot": "libs/admin/feature-page/src",
-      "prefix": "tour-of-heroes",
-      "targets": {
-        "test": {
-          "executor": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/admin/feature-page/src/test.ts",
-            "tsConfig": "libs/admin/feature-page/tsconfig.spec.json",
-            "karmaConfig": "libs/admin/feature-page/karma.conf.js"
-          }
-        }
-      }
-    },
+    "admin-feature-page": "libs/admin/feature-page",
     "auth-feature-login-page": {
       "projectType": "library",
       "root": "libs/auth/feature-login-page",

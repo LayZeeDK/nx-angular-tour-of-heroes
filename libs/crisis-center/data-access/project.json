@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/crisis-center/data-access",
+  "sourceRoot": "libs/crisis-center/data-access/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/crisis-center/data-access/src/test.ts",
+        "tsConfig": "libs/crisis-center/data-access/tsconfig.spec.json",
+        "karmaConfig": "libs/crisis-center/data-access/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:crisis-center", "type:data-access"]
+}

@@ -1,0 +1,95 @@
+{
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:application": {
+      "strict": true
+    }
+  },
+  "root": "apps/tour-of-heroes-app",
+  "sourceRoot": "apps/tour-of-heroes-app/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/tour-of-heroes-app",
+        "index": "apps/tour-of-heroes-app/src/index.html",
+        "main": "apps/tour-of-heroes-app/src/main.ts",
+        "polyfills": "apps/tour-of-heroes-app/src/polyfills.ts",
+        "tsConfig": "apps/tour-of-heroes-app/tsconfig.app.json",
+        "assets": [
+          "apps/tour-of-heroes-app/src/favicon.ico",
+          "apps/tour-of-heroes-app/src/assets"
+        ],
+        "styles": ["apps/tour-of-heroes-app/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/tour-of-heroes-app/src/environments/environment.ts",
+              "with": "apps/tour-of-heroes-app/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "tour-of-heroes-app:build:production"
+        },
+        "development": {
+          "browserTarget": "tour-of-heroes-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "tour-of-heroes-app:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/tour-of-heroes-app/src/test.ts",
+        "polyfills": "apps/tour-of-heroes-app/src/polyfills.ts",
+        "tsConfig": "apps/tour-of-heroes-app/tsconfig.spec.json",
+        "karmaConfig": "apps/tour-of-heroes-app/karma.conf.js",
+        "assets": [
+          "apps/tour-of-heroes-app/src/favicon.ico",
+          "apps/tour-of-heroes-app/src/assets"
+        ],
+        "styles": ["apps/tour-of-heroes-app/src/styles.css"],
+        "scripts": []
+      }
+    }
+  },
+  "tags": ["scope:tour-of-heroes-app", "type:app"]
+}

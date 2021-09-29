@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/crisis-center/feature-detail",
+  "sourceRoot": "libs/crisis-center/feature-detail/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/crisis-center/feature-detail/src/test.ts",
+        "tsConfig": "libs/crisis-center/feature-detail/tsconfig.spec.json",
+        "karmaConfig": "libs/crisis-center/feature-detail/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:crisis-center", "type:feature"]
+}

@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui-dialogs",
+  "sourceRoot": "libs/shared/ui-dialogs/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui-dialogs/src/test.ts",
+        "tsConfig": "libs/shared/ui-dialogs/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui-dialogs/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:ui"]
+}

@@ -18,49 +18,5 @@
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
-  },
-  "projects": {
-    "auth-feature-login-page": {
-      "tags": ["scope:auth", "type:feature"]
-    },
-    "crisis-center-data-access": {
-      "tags": ["scope:crisis-center", "type:data-access"]
-    },
-    "crisis-center-domain": {
-      "tags": ["scope:crisis-center", "type:domain"]
-    },
-    "crisis-center-feature-detail": {
-      "tags": ["scope:crisis-center", "type:feature"]
-    },
-    "crisis-center-feature-home": {
-      "tags": ["scope:crisis-center", "type:feature"]
-    },
-    "crisis-center-feature-list": {
-      "tags": ["scope:crisis-center", "type:feature"]
-    },
-    "crisis-center-feature-shell": {
-      "tags": ["scope:crisis-center", "type:feature"]
-    },
-    "heroes-feature-page": {
-      "tags": ["scope:heroes", "type:feature"]
-    },
-    "shared-data-access-messages": {
-      "tags": ["scope:shared", "type:data-access"]
-    },
-    "shared-data-access-navigation": {
-      "tags": ["scope:shared", "type:data-access"]
-    },
-    "shared-data-access-security": {
-      "tags": ["scope:shared", "type:data-access"]
-    },
-    "shared-ui-dialogs": {
-      "tags": ["scope:shared", "type:ui"]
-    },
-    "shared-ui-navigation": {
-      "tags": ["scope:shared", "type:ui"]
-    },
-    "tour-of-heroes-app": {
-      "tags": ["scope:tour-of-heroes-app", "type:app"]
-    }
   }
 }

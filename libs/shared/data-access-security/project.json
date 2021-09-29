@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/data-access-security",
+  "sourceRoot": "libs/shared/data-access-security/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/data-access-security/src/test.ts",
+        "tsConfig": "libs/shared/data-access-security/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/data-access-security/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:data-access"]
+}

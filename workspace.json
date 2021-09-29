@@ -29,6 +29,7 @@
     "crisis-center-feature-list": "libs/crisis-center/feature-list",
     "crisis-center-feature-shell": "libs/crisis-center/feature-shell",
     "heroes-feature-page": "libs/heroes/feature-page",
+    "heroes-feature-shell": "libs\\heroes\\feature-shell",
     "shared-data-access-messages": "libs/shared/data-access-messages",
     "shared-data-access-navigation": "libs/shared/data-access-navigation",
     "shared-data-access-security": "libs/shared/data-access-security",

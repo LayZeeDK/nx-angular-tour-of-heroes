@@ -44,6 +44,9 @@
       "@tour-of-heroes/heroes/feature-page": [
         "libs/heroes/feature-page/src/index.ts"
       ],
+      "@tour-of-heroes/heroes/feature-shell": [
+        "libs/heroes/feature-shell/src/index.ts"
+      ],
       "@tour-of-heroes/shared/data-access-messages": [
         "libs/shared/data-access-messages/src/index.ts"
       ],

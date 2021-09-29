@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+
+import { HeroesComponent, HeroesScam } from './heroes/heroes.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HeroesComponent,
+  },
+];
 
 @NgModule({
-  imports: [CommonModule],
+  exports: [RouterModule],
+  imports: [RouterModule.forChild(routes), HeroesScam],
 })
 export class HeroesFeatureShellModule {}

@@ -29,6 +29,13 @@ const appRoutes: Routes = [
       ),
     data: { preload: true },
   },
+  {
+    path: 'heroez',
+    loadChildren: () =>
+      import('@tour-of-heroes/heroes/feature-shell').then(
+        (esModule) => esModule.HeroesFeatureShellModule
+      ),
+  },
   { path: '', redirectTo: '/superheroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

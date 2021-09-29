@@ -9,17 +9,18 @@ const routes: Routes = [
     component: HeroesComponent,
     children: [
       {
-        path: ':id',
+        path: '',
+        pathMatch: 'full',
         loadChildren: () =>
-          import('@tour-of-heroes/heroes/feature-detail').then(
-            (m) => m.HeroesFeatureDetailModule
+          import('@tour-of-heroes/heroes/feature-list').then(
+            (m) => m.HeroesFeatureListModule
           ),
       },
       {
         path: '',
         loadChildren: () =>
-          import('@tour-of-heroes/heroes/feature-list').then(
-            (m) => m.HeroesFeatureListModule
+          import('@tour-of-heroes/heroes/feature-detail').then(
+            (m) => m.HeroesFeatureDetailModule
           ),
       },
     ],

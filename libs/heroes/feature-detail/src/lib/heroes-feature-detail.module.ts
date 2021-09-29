@@ -6,7 +6,7 @@ import { HeroDetailModule } from './hero-detail/hero-detail.module';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: HeroDetailComponent,
     data: { animation: 'hero' },
   },

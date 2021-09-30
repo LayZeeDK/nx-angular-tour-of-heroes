@@ -24,7 +24,7 @@
     "admin-feature-manage-crises": "libs/admin/feature-manage-crises",
     "admin-feature-manage-heroes": "libs/admin/feature-manage-heroes",
     "admin-feature-shell": "libs/admin/feature-shell",
-    "auth-feature-login": "libs\\auth\\feature-login",
+    "auth-feature-login": "libs/auth/feature-login",
     "auth-feature-shell": "libs/auth/feature-shell",
     "crisis-center-data-access": "libs/crisis-center/data-access",
     "crisis-center-domain": "libs/crisis-center/domain",

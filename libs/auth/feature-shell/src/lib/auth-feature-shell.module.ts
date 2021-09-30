@@ -7,7 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: AuthComponent,
-    children: [],
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('@tour-of-heroes/auth/feature-login').then(
+            (esModule) => esModule.AuthFeatureLoginModule
+          ),
+      },
+    ],
   },
 ];
 

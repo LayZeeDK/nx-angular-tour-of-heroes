@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthFeatureLoginPageModule } from '@tour-of-heroes/auth/feature-login-page';
 import { SelectivePreloadingStrategyService } from '@tour-of-heroes/shared/data-access-navigation';
 import { AuthGuard } from '@tour-of-heroes/shared/data-access-security';
 import { ComposeMessageComponent, ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
@@ -40,6 +39,13 @@ const appRoutes: Routes = [
     path: 'superhero',
     loadChildren: loadHeroesFeatureShell,
   },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('@tour-of-heroes/auth/feature-shell').then(
+        (esModule) => esModule.AuthFeatureShellModule
+      ),
+  },
   { path: '', redirectTo: '/superheroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -54,7 +60,6 @@ const appRoutes: Routes = [
       anchorScrolling: 'enabled',
       paramsInheritanceStrategy: 'always',
     }),
-    AuthFeatureLoginPageModule,
     ComposeMessageModule,
     PageNotFoundModule,
   ],

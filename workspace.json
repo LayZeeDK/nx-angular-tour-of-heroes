@@ -16,8 +16,7 @@
     "@schematics/angular:component": {
       "displayBlock": true,
       "prefix": "app"
-    },
-    "@nrwl/angular:component": {}
+    }
   },
   "projects": {
     "admin-feature-dashboard": "libs/admin/feature-dashboard",

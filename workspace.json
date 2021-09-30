@@ -21,6 +21,7 @@
   },
   "projects": {
     "admin-feature-page": "libs/admin/feature-page",
+    "admin-feature-shell": "libs\\admin\\feature-shell",
     "auth-feature-login-page": "libs/auth/feature-login-page",
     "crisis-center-data-access": "libs/crisis-center/data-access",
     "crisis-center-domain": "libs/crisis-center/domain",
@@ -29,7 +30,7 @@
     "crisis-center-feature-list": "libs/crisis-center/feature-list",
     "crisis-center-feature-shell": "libs/crisis-center/feature-shell",
     "heroes-data-access": "libs/heroes/data-access",
-    "heroes-domain": "libs\\heroes\\domain",
+    "heroes-domain": "libs/heroes/domain",
     "heroes-feature-detail": "libs/heroes/feature-detail",
     "heroes-feature-list": "libs/heroes/feature-list",
     "heroes-feature-shell": "libs/heroes/feature-shell",

@@ -20,8 +20,9 @@
     "@nrwl/angular:component": {}
   },
   "projects": {
+    "admin-feature-dashboard": "libs\\admin\\feature-dashboard",
     "admin-feature-page": "libs/admin/feature-page",
-    "admin-feature-shell": "libs\\admin\\feature-shell",
+    "admin-feature-shell": "libs/admin/feature-shell",
     "auth-feature-login-page": "libs/auth/feature-login-page",
     "crisis-center-data-access": "libs/crisis-center/data-access",
     "crisis-center-domain": "libs/crisis-center/domain",

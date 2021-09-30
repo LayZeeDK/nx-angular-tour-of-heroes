@@ -17,6 +17,9 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
+      "@tour-of-heroes/admin/feature-dashboard": [
+        "libs/admin/feature-dashboard/src/index.ts"
+      ],
       "@tour-of-heroes/admin/feature-page": [
         "libs/admin/feature-page/src/index.ts"
       ],

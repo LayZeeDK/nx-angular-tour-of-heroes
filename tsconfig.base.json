@@ -32,6 +32,9 @@
       "@tour-of-heroes/auth/feature-login-page": [
         "libs/auth/feature-login-page/src/index.ts"
       ],
+      "@tour-of-heroes/auth/feature-shell": [
+        "libs/auth/feature-shell/src/index.ts"
+      ],
       "@tour-of-heroes/crisis-center/data-access": [
         "libs/crisis-center/data-access/src/index.ts"
       ],

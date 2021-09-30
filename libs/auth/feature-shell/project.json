@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/feature-shell",
+  "sourceRoot": "libs/auth/feature-shell/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/feature-shell/src/test.ts",
+        "tsConfig": "libs/auth/feature-shell/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/feature-shell/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:auth", "type:feature"]
+}

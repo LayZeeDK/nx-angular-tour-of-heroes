@@ -21,7 +21,8 @@
   },
   "projects": {
     "admin-feature-dashboard": "libs/admin/feature-dashboard",
-    "admin-feature-manage-crises": "libs\\admin\\feature-manage-crises",
+    "admin-feature-manage-crises": "libs/admin/feature-manage-crises",
+    "admin-feature-manage-heroes": "libs\\admin\\feature-manage-heroes",
     "admin-feature-page": "libs/admin/feature-page",
     "admin-feature-shell": "libs/admin/feature-shell",
     "auth-feature-login-page": "libs/auth/feature-login-page",

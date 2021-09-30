@@ -23,6 +23,9 @@
       "@tour-of-heroes/admin/feature-manage-crises": [
         "libs/admin/feature-manage-crises/src/index.ts"
       ],
+      "@tour-of-heroes/admin/feature-manage-heroes": [
+        "libs/admin/feature-manage-heroes/src/index.ts"
+      ],
       "@tour-of-heroes/admin/feature-page": [
         "libs/admin/feature-page/src/index.ts"
       ],

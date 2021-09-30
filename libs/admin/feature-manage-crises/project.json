@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/admin/feature-manage-crises",
+  "sourceRoot": "libs/admin/feature-manage-crises/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/admin/feature-manage-crises/src/test.ts",
+        "tsConfig": "libs/admin/feature-manage-crises/tsconfig.spec.json",
+        "karmaConfig": "libs/admin/feature-manage-crises/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:admin", "type:feature"]
+}

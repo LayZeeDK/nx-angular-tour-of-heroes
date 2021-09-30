@@ -20,6 +20,9 @@
       "@tour-of-heroes/admin/feature-dashboard": [
         "libs/admin/feature-dashboard/src/index.ts"
       ],
+      "@tour-of-heroes/admin/feature-manage-crises": [
+        "libs/admin/feature-manage-crises/src/index.ts"
+      ],
       "@tour-of-heroes/admin/feature-page": [
         "libs/admin/feature-page/src/index.ts"
       ],

@@ -20,8 +20,8 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     loadChildren: () =>
-      import('@tour-of-heroes/admin/feature-page').then(
-        (m) => m.AdminFeaturePageModule
+      import('@tour-of-heroes/admin/feature-shell').then(
+        (esModule) => esModule.AdminFeatureShellModule
       ),
     canLoad: [AuthGuard],
   },

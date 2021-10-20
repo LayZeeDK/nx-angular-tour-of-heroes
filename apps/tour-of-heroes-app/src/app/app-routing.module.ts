@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { heroesDefaultRoutePath, heroesRoutes } from '@tour-of-heroes/heroes/feature-shell';
 import { SelectivePreloadingStrategyService } from '@tour-of-heroes/shared/data-access-navigation';
 import { AuthGuard } from '@tour-of-heroes/shared/data-access-security';
 import { ComposeMessageComponent, ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
 import { PageNotFoundComponent, PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
-
-const loadHeroesFeatureShell = () =>
-  import('@tour-of-heroes/heroes/feature-shell').then(
-    (esModule) => esModule.HeroesFeatureShellModule
-  );
 
 const appRoutes: Routes = [
   {
@@ -32,13 +28,7 @@ const appRoutes: Routes = [
       ),
     data: { preload: true },
   },
-  { path: 'heroes', redirectTo: 'superheroes' },
-  { path: 'superheroes', loadChildren: loadHeroesFeatureShell },
-  { path: 'hero', redirectTo: 'superhero' },
-  {
-    path: 'superhero',
-    loadChildren: loadHeroesFeatureShell,
-  },
+  ...heroesRoutes,
   {
     path: 'login',
     loadChildren: () =>
@@ -46,7 +36,7 @@ const appRoutes: Routes = [
         (esModule) => esModule.AuthFeatureShellModule
       ),
   },
-  { path: '', redirectTo: '/superheroes', pathMatch: 'full' },
+  { path: '', redirectTo: heroesDefaultRoutePath, pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 

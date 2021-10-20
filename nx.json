@@ -3,6 +3,24 @@
   "affected": {
     "defaultBase": "main"
   },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "tour-of-heroes-app",
+  "generators": {
+    "@nrwl/angular:application": {
+      "linter": "none",
+      "unitTestRunner": "karma"
+    },
+    "@nrwl/angular:library": {
+      "linter": "none",
+      "unitTestRunner": "karma"
+    },
+    "@schematics/angular:component": {
+      "displayBlock": true,
+      "prefix": "app"
+    }
+  },
   "implicitDependencies": {
     "package.json": "*",
     "tslint.json": "*",
@@ -18,6 +36,5 @@
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
-  },
-  "projects": {}
+  }
 }

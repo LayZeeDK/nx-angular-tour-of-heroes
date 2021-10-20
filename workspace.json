@@ -1,23 +1,5 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "defaultProject": "tour-of-heroes-app",
-  "generators": {
-    "@nrwl/angular:application": {
-      "linter": "none",
-      "unitTestRunner": "karma"
-    },
-    "@nrwl/angular:library": {
-      "linter": "none",
-      "unitTestRunner": "karma"
-    },
-    "@schematics/angular:component": {
-      "displayBlock": true,
-      "prefix": "app"
-    }
-  },
   "projects": {
     "admin-feature-dashboard": "libs/admin/feature-dashboard",
     "admin-feature-manage-crises": "libs/admin/feature-manage-crises",

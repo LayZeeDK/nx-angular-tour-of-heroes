@@ -2,11 +2,10 @@
 import 'zone.js';
 import 'zone.js/testing';
 
-import { ComponentFixtureAutoDetect, getTestBed } from '@angular/core/testing';
 import {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
-} from '@angular/platform-browser-dynamic/testing';
+  setUpJasmineDom,
+  setUpTestbed,
+} from '@tour-of-heroes/shared/test-util-staging';
 
 declare const require: {
   context(
@@ -19,25 +18,10 @@ declare const require: {
   };
 };
 
+setUpJasmineDom();
+
 // First, initialize the Angular testing environment.
-getTestBed().initTestEnvironment(
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting(),
-  {
-    teardown: {
-      destroyAfterEach: true,
-      rethrowErrors: false,
-    },
-  }
-);
-getTestBed().configureCompiler({
-  providers: [
-    {
-      provide: ComponentFixtureAutoDetect,
-      useValue: true,
-    },
-  ],
-});
+setUpTestbed();
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.

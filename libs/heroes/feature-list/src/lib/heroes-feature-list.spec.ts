@@ -4,10 +4,7 @@ import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
 import { HEROES } from '@tour-of-heroes/heroes/data-access';
 import { HeroesFeatureDetailModule } from '@tour-of-heroes/heroes/feature-detail';
-import {
-  PageNotFoundComponent,
-  PageNotFoundModule,
-} from '@tour-of-heroes/shared/ui-navigation';
+import { PageNotFoundComponent, PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
 
 import { HeroesFeatureListModule } from './heroes-feature-list.module';
 
@@ -18,7 +15,9 @@ describe('Heroes list feature', () => {
       imports: [PageNotFoundModule],
       routes: [
         { path: featurePath, loadChildren: () => HeroesFeatureListModule },
+        { path: 'superheroes', loadChildren: () => HeroesFeatureListModule },
         { path: detailPath, loadChildren: () => HeroesFeatureDetailModule },
+        { path: 'superhero', loadChildren: () => HeroesFeatureDetailModule },
         { path: '**', component: PageNotFoundComponent },
       ],
     });
@@ -29,19 +28,19 @@ describe('Heroes list feature', () => {
   });
 
   let appLocation: Location;
-  const detailPath = 'hero';
-  const featurePath = 'heroes';
+  const detailPath = 'superhero';
+  const featurePath = 'superheroes';
   let view: RenderResult<SpectacularAppComponent, SpectacularAppComponent>;
 
   it('displays heroes', async () => {
-    await view.navigate('', featurePath);
+    await view.navigate('/', featurePath);
     const heroes = await view.findAllByRole('listitem');
     expect(heroes.length).toBeGreaterThan(0);
   });
 
   it('1st hero matches 1st test hero', async () => {
     const [expectedHero] = HEROES;
-    await view.navigate('', featurePath);
+    await view.navigate('/', featurePath);
     const [actualHero] = await view.findAllByRole('listitem');
 
     expect(actualHero)
@@ -54,7 +53,7 @@ describe('Heroes list feature', () => {
 
   it('navigates to selected hero detail on click', async () => {
     const [expectedHero] = HEROES;
-    await view.navigate('', featurePath);
+    await view.navigate('/', featurePath);
     const heroLink = await view.findByRole('link', {
       name: new RegExp(expectedHero.name, 'i'),
     });
@@ -64,11 +63,11 @@ describe('Heroes list feature', () => {
 
     expect(appLocation.path())
       .withContext('nav to heroes detail URL')
-      .toBe(`/${detailPath}/${expectedHero.id}`);
+      .toBe(`/hero/${expectedHero.id}`);
   });
 
   it('the sidekicks button is broken', async () => {
-    await view.navigate('', featurePath);
+    await view.navigate('/', featurePath);
     const sidekicksLink = await view.findByRole('button', {
       name: /sidekicks/i,
     });

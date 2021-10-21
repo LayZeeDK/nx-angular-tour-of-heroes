@@ -2,14 +2,10 @@
 import 'zone.js/dist/zone';
 import 'zone.js/dist/zone-testing';
 
-import { getTestBed } from '@angular/core/testing';
-import {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
-} from '@angular/platform-browser-dynamic/testing';
 // Issue with @types/testing-library__jasmine-dom
 // @ts-ignore
 import JasmineDOM from '@testing-library/jasmine-dom';
+import { setUpTestbed } from '@tour-of-heroes/shared/test-util-staging';
 
 declare const require: {
   context(
@@ -27,15 +23,7 @@ beforeAll(() => {
 });
 
 // First, initialize the Angular testing environment.
-getTestBed().initTestEnvironment(
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting(),
-  {
-    teardown: {
-      destroyAfterEach: true,
-    },
-  }
-);
+setUpTestbed();
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.

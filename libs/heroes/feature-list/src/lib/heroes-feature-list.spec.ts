@@ -78,4 +78,18 @@ describe('Heroes list feature', () => {
       await view.findByRole('heading', { name: /not found/i })
     ).toBeInTheDocument();
   });
+
+  it('when navigating back from the detail page Then the hero is highlighted in the list', async () => {
+    const [expectedHero] = HEROES;
+    await view.navigate(`/${expectedHero.id}`, detailPath);
+    const backButton = await view.findByRole('button', { name: /back/i });
+
+    user.click(backButton);
+    await view.fixture.whenStable();
+
+    const actualHero = await view.findByText(
+      new RegExp(expectedHero.name, 'i')
+    );
+    expect(actualHero.closest('.selected')).toBeInTheDocument();
+  });
 });

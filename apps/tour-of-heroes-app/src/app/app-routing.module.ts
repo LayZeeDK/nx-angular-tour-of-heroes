@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { heroesDefaultRoutePath, heroesRoutes } from '@tour-of-heroes/heroes/feature-shell';
+import {
+  heroesDefaultRoutePath,
+  heroesRoutes,
+} from '@tour-of-heroes/heroes/feature-shell';
 import { SelectivePreloadingStrategyService } from '@tour-of-heroes/shared/data-access-navigation';
 import { AuthGuard } from '@tour-of-heroes/shared/data-access-security';
-import { ComposeMessageComponent, ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
-import { PageNotFoundComponent, PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
+import {
+  ComposeMessageComponent,
+  ComposeMessageModule,
+} from '@tour-of-heroes/shared/ui-dialogs';
+import {
+  PageNotFoundComponent,
+  PageNotFoundModule,
+} from '@tour-of-heroes/shared/ui-navigation';
 
 const appRoutes: Routes = [
   {

@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/test-util-staging",
+  "sourceRoot": "libs/shared/test-util-staging/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/test-util-staging/src/test.ts",
+        "tsConfig": "libs/shared/test-util-staging/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/test-util-staging/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:test-util"]
+}

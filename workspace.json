@@ -21,6 +21,7 @@
     "shared-data-access-messages": "libs/shared/data-access-messages",
     "shared-data-access-navigation": "libs/shared/data-access-navigation",
     "shared-data-access-security": "libs/shared/data-access-security",
+    "shared-test-util-staging": "libs/shared/test-util-staging",
     "shared-ui-dialogs": "libs/shared/ui-dialogs",
     "shared-ui-navigation": "libs/shared/ui-navigation",
     "tour-of-heroes-app": "apps/tour-of-heroes-app"

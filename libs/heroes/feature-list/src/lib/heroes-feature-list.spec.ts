@@ -1,35 +1,39 @@
-import { Location } from '@angular/common';
 import { SpectacularAppComponent } from '@ngworker/spectacular';
 import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
 import { HEROES } from '@tour-of-heroes/heroes/data-access';
-import { HeroesFeatureDetailModule } from '@tour-of-heroes/heroes/feature-detail';
-import { PageNotFoundComponent, PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
-
-import { HeroesFeatureListModule } from './heroes-feature-list.module';
+import { heroesRoutes } from '@tour-of-heroes/heroes/feature-shell';
+import {
+  PageNotFoundComponent,
+  PageNotFoundModule,
+} from '@tour-of-heroes/shared/ui-navigation';
 
 describe('Heroes list feature', () => {
   beforeEach(async () => {
     view = await render(SpectacularAppComponent, {
-      excludeComponentDeclaration: true,
-      imports: [PageNotFoundModule],
+      imports: [
+        // SpectacularFeatureTestingModule.withRoutes({
+        //   routes: [
+        //     ...heroesRoutes,
+        //     { path: '**', component: PageNotFoundComponent },
+        //   ],
+        // }),
+        PageNotFoundModule,
+      ],
       routes: [
-        { path: featurePath, loadChildren: () => HeroesFeatureListModule },
-        { path: 'superheroes', loadChildren: () => HeroesFeatureListModule },
-        { path: detailPath, loadChildren: () => HeroesFeatureDetailModule },
-        { path: 'superhero', loadChildren: () => HeroesFeatureDetailModule },
+        ...heroesRoutes,
         { path: '**', component: PageNotFoundComponent },
       ],
     });
     const inject = view.fixture.debugElement.injector.get.bind(
       view.fixture.debugElement.injector
     );
-    appLocation = inject(Location);
   });
 
-  let appLocation: Location;
   const detailPath = 'superhero';
   const featurePath = 'superheroes';
+  const [expectedHero] = HEROES;
+  const expectedHeroName = new RegExp(expectedHero.name, 'i');
   let view: RenderResult<SpectacularAppComponent, SpectacularAppComponent>;
 
   it('displays heroes', async () => {
@@ -39,31 +43,28 @@ describe('Heroes list feature', () => {
   });
 
   it('1st hero matches 1st test hero', async () => {
-    const [expectedHero] = HEROES;
     await view.navigate('/', featurePath);
     const [actualHero] = await view.findAllByRole('listitem');
 
     expect(actualHero)
       .withContext('hero.id')
-      .toHaveTextContent(expectedHero.id.toString());
+      .toHaveTextContent(new RegExp('^' + expectedHero.id));
     expect(actualHero)
       .withContext('hero.name')
-      .toHaveTextContent(expectedHero.name);
+      .toHaveTextContent(expectedHeroName);
   });
 
   it('navigates to selected hero detail on click', async () => {
-    const [expectedHero] = HEROES;
     await view.navigate('/', featurePath);
     const heroLink = await view.findByRole('link', {
-      name: new RegExp(expectedHero.name, 'i'),
+      name: expectedHeroName,
     });
 
     user.click(heroLink);
-    await view.fixture.whenStable();
 
-    expect(appLocation.path())
-      .withContext('nav to heroes detail URL')
-      .toBe(`/hero/${expectedHero.id}`);
+    expect(
+      await view.findByRole('heading', { name: expectedHeroName })
+    ).toBeInTheDocument();
   });
 
   it('the sidekicks button is broken', async () => {
@@ -79,17 +80,15 @@ describe('Heroes list feature', () => {
     ).toBeInTheDocument();
   });
 
-  it('when navigating back from the detail page Then the hero is highlighted in the list', async () => {
-    const [expectedHero] = HEROES;
+  it('the hero is highlighted when going back from detail', async () => {
     await view.navigate(`/${expectedHero.id}`, detailPath);
     const backButton = await view.findByRole('button', { name: /back/i });
 
     user.click(backButton);
-    await view.fixture.whenStable();
 
-    const actualHero = await view.findByText(
-      new RegExp(expectedHero.name, 'i')
-    );
+    const actualHero = await view.findByRole('link', {
+      name: expectedHeroName,
+    });
     expect(actualHero.closest('.selected')).toBeInTheDocument();
   });
 });

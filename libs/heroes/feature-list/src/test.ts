@@ -3,6 +3,7 @@ import 'zone.js/dist/zone';
 import 'zone.js/dist/zone-testing';
 
 import {
+  setUpAngularTestingLibrary,
   setUpJasmineDom,
   setUpTestbed,
 } from '@tour-of-heroes/shared/test-util-staging';
@@ -22,6 +23,7 @@ setUpJasmineDom();
 
 // First, initialize the Angular testing environment.
 setUpTestbed();
+setUpAngularTestingLibrary();
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.

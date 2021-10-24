@@ -75,6 +75,9 @@
       "@tour-of-heroes/shared/data-access-security": [
         "libs/shared/data-access-security/src/index.ts"
       ],
+      "@tour-of-heroes/shared/test-util-staging": [
+        "libs/shared/test-util-staging/src/index.ts"
+      ],
       "@tour-of-heroes/shared/ui-dialogs": [
         "libs/shared/ui-dialogs/src/index.ts"
       ],

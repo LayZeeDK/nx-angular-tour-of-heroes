@@ -1,13 +1,13 @@
+// This file is required by karma.conf.js and loads recursively all the .spec and framework files
 import 'zone.js';
 import 'zone.js/testing';
 
+import { getTestBed } from '@angular/core/testing';
 import {
-  setUpAngularTestingLibrary,
-  setUpJasmineDom,
-  setUpTestbed,
-} from '@tour-of-heroes/shared/test-util-staging';
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} from '@angular/platform-browser-dynamic/testing';
 
-// This file is required by karma.conf.js and loads recursively all the .spec and framework files
 declare const require: {
   context(
     path: string,
@@ -19,11 +19,11 @@ declare const require: {
   };
 };
 
-setUpJasmineDom();
-
 // First, initialize the Angular testing environment.
-setUpTestbed();
-setUpAngularTestingLibrary();
+getTestBed().initTestEnvironment(
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting()
+);
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.

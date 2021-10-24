@@ -10,10 +10,6 @@ import {
   ComposeMessageComponent,
   ComposeMessageModule,
 } from '@tour-of-heroes/shared/ui-dialogs';
-import {
-  PageNotFoundComponent,
-  PageNotFoundModule,
-} from '@tour-of-heroes/shared/ui-navigation';
 
 const appRoutes: Routes = [
   {
@@ -46,7 +42,13 @@ const appRoutes: Routes = [
       ),
   },
   { path: '', redirectTo: heroesDefaultRoutePath, pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('@tour-of-heroes/shared/ui-navigation').then(
+        (esModule) => esModule.PageNotFoundModule
+      ),
+  },
 ];
 
 @NgModule({
@@ -60,7 +62,6 @@ const appRoutes: Routes = [
       paramsInheritanceStrategy: 'always',
     }),
     ComposeMessageModule,
-    PageNotFoundModule,
   ],
   exports: [RouterModule],
 })

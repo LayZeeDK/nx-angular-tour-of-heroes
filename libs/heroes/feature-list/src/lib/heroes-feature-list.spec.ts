@@ -3,10 +3,7 @@ import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
 import { HEROES } from '@tour-of-heroes/heroes/data-access';
 import { heroesRoutes } from '@tour-of-heroes/heroes/feature-shell';
-import {
-  PageNotFoundComponent,
-  PageNotFoundModule,
-} from '@tour-of-heroes/shared/ui-navigation';
+import { PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
 
 describe('Heroes list feature', () => {
   beforeEach(async () => {
@@ -18,11 +15,10 @@ describe('Heroes list feature', () => {
         //     { path: '**', component: PageNotFoundComponent },
         //   ],
         // }),
-        PageNotFoundModule,
       ],
       routes: [
         ...heroesRoutes,
-        { path: '**', component: PageNotFoundComponent },
+        { path: '**', loadChildren: () => PageNotFoundModule },
       ],
     });
     const inject = view.fixture.debugElement.injector.get.bind(

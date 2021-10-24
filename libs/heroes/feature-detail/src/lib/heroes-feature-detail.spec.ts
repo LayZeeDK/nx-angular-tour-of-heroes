@@ -55,4 +55,15 @@ describe('Heroes detail feature', () => {
       })
     ).toBeInTheDocument();
   });
+
+  it('only displays Heroes title when the specified hero ID is non-existing', async () => {
+    await view.navigate(`/-1`, featurePath);
+
+    expect(
+      await view.findByRole('heading', {
+        name: /heroes/i,
+      })
+    ).toBeInTheDocument();
+    expect(view.queryByRole('textbox')).not.toBeInTheDocument();
+  });
 });

@@ -1,4 +1,7 @@
-import { SpectacularAppComponent, SpectacularFeatureTestingModule } from '@ngworker/spectacular';
+import {
+  SpectacularAppComponent,
+  SpectacularFeatureTestingModule,
+} from '@ngworker/spectacular';
 import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
 import { HEROES } from '@tour-of-heroes/heroes/data-access';

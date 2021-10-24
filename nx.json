@@ -19,8 +19,7 @@
     "@schematics/angular:component": {
       "displayBlock": true,
       "prefix": "app"
-    },
-    "@nrwl/angular:component": {}
+    }
   },
   "implicitDependencies": {
     "package.json": "*",

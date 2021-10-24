@@ -1,18 +1,22 @@
-import { SpectacularAppComponent } from '@ngworker/spectacular';
+import {
+  SpectacularAppComponent,
+  SpectacularFeatureTestingModule,
+} from '@ngworker/spectacular';
 import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
 import { HEROES } from '@tour-of-heroes/heroes/data-access';
 import { heroesRoutes } from '@tour-of-heroes/heroes/feature-shell';
 
+import { HeroesFeatureDetailModule } from './heroes-feature-detail.module';
+
 describe('Heroes detail feature', () => {
   beforeEach(async () => {
     view = await render(SpectacularAppComponent, {
       imports: [
-        // SpectacularFeatureTestingModule.withRoutes({
-        //   routes: [
-        //     ...heroesRoutes,
-        //   ],
-        // }),
+        SpectacularFeatureTestingModule.withFeature({
+          featureModule: HeroesFeatureDetailModule,
+          featurePath,
+        }),
       ],
       routes: [...heroesRoutes],
     });

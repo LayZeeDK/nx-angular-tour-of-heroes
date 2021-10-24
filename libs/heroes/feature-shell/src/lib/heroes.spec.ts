@@ -15,7 +15,7 @@ describe('Heroes feature', () => {
       imports: [
         SpectacularFeatureTestingModule.withFeature({
           featureModule: HeroesFeatureShellModule,
-          featurePath: heroesDefaultRoutePath,
+          featurePath,
         }),
       ],
       routes: [...heroesRoutes],
@@ -29,6 +29,7 @@ describe('Heroes feature', () => {
 
   it('changes a hero name', async () => {
     await view.navigate('/', featurePath);
+
     user.click(
       await view.findByRole('link', {
         name: expectedHeroName,

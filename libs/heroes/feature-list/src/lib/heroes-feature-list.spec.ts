@@ -25,9 +25,6 @@ describe('Heroes list feature', () => {
         { path: '**', loadChildren: () => PageNotFoundModule },
       ],
     });
-    const inject = view.fixture.debugElement.injector.get.bind(
-      view.fixture.debugElement.injector
-    );
   });
 
   const detailPath = 'superhero';

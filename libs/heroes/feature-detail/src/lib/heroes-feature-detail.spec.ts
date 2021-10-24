@@ -20,9 +20,6 @@ describe('Heroes detail feature', () => {
       ],
       routes: [...heroesRoutes],
     });
-    const inject = view.fixture.debugElement.injector.get.bind(
-      view.fixture.debugElement.injector
-    );
   });
 
   const featurePath = 'superhero';

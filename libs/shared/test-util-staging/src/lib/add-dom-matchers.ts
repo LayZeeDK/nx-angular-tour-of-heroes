@@ -3,5 +3,8 @@
 import JasmineDOM from '@testing-library/jasmine-dom';
 
 export function addDomMatchers(): void {
-  jasmine.addMatchers(JasmineDOM);
+  // Jasmine matchers must be added in a `before*` hook
+  beforeAll(() => {
+    jasmine.addMatchers(JasmineDOM);
+  });
 }

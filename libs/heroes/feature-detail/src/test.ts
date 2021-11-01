@@ -1,7 +1,11 @@
 import 'zone.js';
 import 'zone.js/testing';
 
-import { addDomMatchers, setUpAngularTestingLibrary, setUpTestbed } from '@tour-of-heroes/shared/test-util-staging';
+import {
+  addDomMatchers,
+  setUpAngularTestingLibrary,
+  setUpTestbed,
+} from '@tour-of-heroes/shared/test-util-staging';
 
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 declare const require: {

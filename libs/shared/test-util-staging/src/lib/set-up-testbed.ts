@@ -1,5 +1,13 @@
-import { ComponentFixtureAutoDetect, getTestBed, TestBed, TestModuleMetadata } from '@angular/core/testing';
-import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
+import {
+  ComponentFixtureAutoDetect,
+  getTestBed,
+  TestBed,
+  TestModuleMetadata,
+} from '@angular/core/testing';
+import {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} from '@angular/platform-browser-dynamic/testing';
 
 function patchTestbed(): void {
   const isUnpatched =

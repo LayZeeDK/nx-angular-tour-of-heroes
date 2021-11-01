@@ -15,6 +15,7 @@
     "crisis-center-feature-shell": "libs/crisis-center/feature-shell",
     "heroes-data-access": "libs/heroes/data-access",
     "heroes-domain": "libs/heroes/domain",
+    "heroes-feature-dashboard": "libs/heroes/feature-dashboard",
     "heroes-feature-detail": "libs/heroes/feature-detail",
     "heroes-feature-list": "libs/heroes/feature-list",
     "heroes-feature-shell": "libs/heroes/feature-shell",

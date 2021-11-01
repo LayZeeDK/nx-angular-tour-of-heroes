@@ -57,6 +57,9 @@
         "libs/heroes/data-access/src/index.ts"
       ],
       "@tour-of-heroes/heroes/domain": ["libs/heroes/domain/src/index.ts"],
+      "@tour-of-heroes/heroes/feature-dashboard": [
+        "libs/heroes/feature-dashboard/src/index.ts"
+      ],
       "@tour-of-heroes/heroes/feature-detail": [
         "libs/heroes/feature-detail/src/index.ts"
       ],

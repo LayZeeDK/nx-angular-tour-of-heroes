@@ -1,12 +1,25 @@
-import { ComponentFixtureAutoDetect, getTestBed } from '@angular/core/testing';
-import {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
-} from '@angular/platform-browser-dynamic/testing';
+import { ComponentFixtureAutoDetect, getTestBed, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
+
+function patchTestbed(): void {
+  const isUnpatched =
+    testbed.configureTestingModule === actualConfigureTestingModule;
+
+  if (isUnpatched) {
+    testbed.configureTestingModule = (moduleDef: TestModuleMetadata): void => {
+      actualConfigureTestingModule.call(testbed, {
+        ...moduleDef,
+        providers: [
+          { provide: ComponentFixtureAutoDetect, useValue: true },
+          ...(moduleDef.providers ?? []),
+        ],
+      });
+    };
+  }
+}
 
 export function setUpTestbed(): void {
-  const testbed = getTestBed();
-
+  testbed.resetTestEnvironment();
   testbed.initTestEnvironment(
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting(),
@@ -16,12 +29,9 @@ export function setUpTestbed(): void {
       },
     }
   );
-  testbed.configureCompiler({
-    providers: [
-      {
-        provide: ComponentFixtureAutoDetect,
-        useValue: true,
-      },
-    ],
-  });
+
+  patchTestbed();
 }
+
+const testbed = getTestBed();
+const actualConfigureTestingModule = TestBed.configureTestingModule;

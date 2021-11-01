@@ -2,11 +2,7 @@
 import 'zone.js';
 import 'zone.js/testing';
 
-import {
-  setUpAngularTestingLibrary,
-  setUpJasmineDom,
-  setUpTestbed,
-} from '@tour-of-heroes/shared/test-util-staging';
+import { addDomMatchers, setUpAngularTestingLibrary, setUpTestbed } from '@tour-of-heroes/shared/test-util-staging';
 
 declare const require: {
   context(
@@ -19,7 +15,7 @@ declare const require: {
   };
 };
 
-setUpJasmineDom();
+addDomMatchers();
 
 // First, initialize the Angular testing environment.
 setUpTestbed();

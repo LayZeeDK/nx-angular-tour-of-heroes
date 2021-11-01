@@ -2,8 +2,6 @@
 // @ts-ignore
 import JasmineDOM from '@testing-library/jasmine-dom';
 
-export function setUpJasmineDom(): void {
-  beforeAll(() => {
-    jasmine.addMatchers(JasmineDOM);
-  });
+export function addDomMatchers(): void {
+  jasmine.addMatchers(JasmineDOM);
 }

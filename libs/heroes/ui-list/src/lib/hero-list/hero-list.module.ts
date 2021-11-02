@@ -6,6 +6,7 @@ import { HeroListComponent } from './hero-list.component';
 
 @NgModule({
   declarations: [HeroListComponent],
+  exports: [HeroListComponent],
   imports: [CommonModule, RouterModule],
 })
 export class HeroListModule {}

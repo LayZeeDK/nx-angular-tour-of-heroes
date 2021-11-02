@@ -1,0 +1,8 @@
+<h2>Heroes</h2>
+
+<app-hero-list
+  [heroes]="(heroes$ | async) ?? []"
+  [selectedId]="(selectedId | async) ?? -1"
+></app-hero-list>
+
+<button routerLink="/sidekicks">Go to sidekicks</button>

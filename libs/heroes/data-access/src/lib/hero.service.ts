@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Hero } from '@tour-of-heroes/heroes/domain';
-import { MessageService } from '@tour-of-heroes/shared/data-access-messages';
+import { MessageService } from '@tour-of-heroes/logging/data-access';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 

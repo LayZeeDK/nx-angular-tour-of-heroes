@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/heroes/ui-page",
+  "sourceRoot": "libs/heroes/ui-page/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/heroes/ui-page/src/test.ts",
+        "tsConfig": "libs/heroes/ui-page/tsconfig.spec.json",
+        "karmaConfig": "libs/heroes/ui-page/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:heroes", "type:ui"]
+}

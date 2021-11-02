@@ -5,4 +5,4 @@ import { HeroListModule } from './hero-list/hero-list.module';
 @NgModule({
   exports: [HeroListModule],
 })
-export class HeroesUiListModule {}
+export class HeroesUiPageModule {}

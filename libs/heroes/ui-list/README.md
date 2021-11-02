@@ -1,1 +1,0 @@
-# Hero list UI

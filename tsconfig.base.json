@@ -69,7 +69,7 @@
       "@tour-of-heroes/heroes/feature-shell": [
         "libs/heroes/feature-shell/src/index.ts"
       ],
-      "@tour-of-heroes/heroes/ui-list": ["libs/heroes/ui-list/src/index.ts"],
+      "@tour-of-heroes/heroes/ui-page": ["libs/heroes/ui-page/src/index.ts"],
       "@tour-of-heroes/logging/data-access": [
         "libs/logging/data-access/src/index.ts"
       ],

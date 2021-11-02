@@ -16,12 +16,16 @@ export class HeroDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private service: HeroService
+    private heroService: HeroService
   ) {}
 
   ngOnInit() {
     this.hero$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => this.service.getHero(params.get('id')!))
+      switchMap((params: ParamMap) => {
+        const id = parseInt(params.get('id')!, 10);
+
+        return this.heroService.getHero(id);
+      })
     );
   }
 
@@ -31,5 +35,11 @@ export class HeroDetailComponent implements OnInit {
     // so that the HeroList component can select that hero.
     // Include a junk 'foo' property for fun.
     this.router.navigate(['/superheroes', { id: heroId, foo: 'foo' }]);
+  }
+
+  save(hero?: Hero): void {
+    if (hero) {
+      this.heroService.updateHero(hero).subscribe(() => this.gotoHeroes(hero));
+    }
   }
 }

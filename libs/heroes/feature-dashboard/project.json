@@ -1,0 +1,17 @@
+{
+  "projectType": "library",
+  "root": "libs/heroes/feature-dashboard",
+  "sourceRoot": "libs/heroes/feature-dashboard/src",
+  "prefix": "tour-of-heroes",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/heroes/feature-dashboard/src/test.ts",
+        "tsConfig": "libs/heroes/feature-dashboard/tsconfig.spec.json",
+        "karmaConfig": "libs/heroes/feature-dashboard/karma.conf.js"
+      }
+    }
+  },
+  "tags": ["scope:heroes", "type:feature"]
+}

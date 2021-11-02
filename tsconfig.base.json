@@ -57,17 +57,24 @@
         "libs/heroes/data-access/src/index.ts"
       ],
       "@tour-of-heroes/heroes/domain": ["libs/heroes/domain/src/index.ts"],
+      "@tour-of-heroes/heroes/feature-dashboard": [
+        "libs/heroes/feature-dashboard/src/index.ts"
+      ],
       "@tour-of-heroes/heroes/feature-detail": [
         "libs/heroes/feature-detail/src/index.ts"
       ],
-      "@tour-of-heroes/heroes/feature-list": [
-        "libs/heroes/feature-list/src/index.ts"
+      "@tour-of-heroes/heroes/feature-page": [
+        "libs/heroes/feature-page/src/index.ts"
       ],
       "@tour-of-heroes/heroes/feature-shell": [
         "libs/heroes/feature-shell/src/index.ts"
       ],
-      "@tour-of-heroes/shared/data-access-messages": [
-        "libs/shared/data-access-messages/src/index.ts"
+      "@tour-of-heroes/heroes/ui-page": ["libs/heroes/ui-page/src/index.ts"],
+      "@tour-of-heroes/logging/data-access": [
+        "libs/logging/data-access/src/index.ts"
+      ],
+      "@tour-of-heroes/logging/feature-messages": [
+        "libs/logging/feature-messages/src/index.ts"
       ],
       "@tour-of-heroes/shared/data-access-navigation": [
         "libs/shared/data-access-navigation/src/index.ts"

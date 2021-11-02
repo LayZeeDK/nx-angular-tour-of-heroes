@@ -12,8 +12,8 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         loadChildren: () =>
-          import('@tour-of-heroes/heroes/feature-list').then(
-            (m) => m.HeroesFeatureListModule
+          import('@tour-of-heroes/heroes/feature-page').then(
+            (m) => m.HeroesFeaturePageModule
           ),
       },
       {

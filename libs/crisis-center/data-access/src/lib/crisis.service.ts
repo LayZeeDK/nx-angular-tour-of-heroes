@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Crisis } from '@tour-of-heroes/crisis-center/domain';
-import { MessageService } from '@tour-of-heroes/shared/data-access-messages';
+import { MessageService } from '@tour-of-heroes/logging/data-access';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 

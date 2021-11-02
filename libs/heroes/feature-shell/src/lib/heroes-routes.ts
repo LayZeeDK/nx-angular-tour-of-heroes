@@ -8,6 +8,13 @@ const loadHeroesFeatureShell = () =>
 export const heroesDefaultRoutePath = 'superheroes';
 
 export const heroesRoutes: Routes = [
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('@tour-of-heroes/heroes/feature-dashboard').then(
+        (esModule) => esModule.HeroesFeatureDashboardModule
+      ),
+  },
   { path: 'heroes', redirectTo: heroesDefaultRoutePath },
   { path: heroesDefaultRoutePath, loadChildren: loadHeroesFeatureShell },
   { path: 'hero', redirectTo: 'superhero' },

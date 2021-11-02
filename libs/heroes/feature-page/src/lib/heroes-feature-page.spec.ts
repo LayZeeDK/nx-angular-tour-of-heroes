@@ -5,18 +5,20 @@ import {
 import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
 import { HEROES } from '@tour-of-heroes/heroes/data-access';
-import { heroesRoutes } from '@tour-of-heroes/heroes/feature-shell';
+import {
+  heroesDefaultRoutePath,
+  heroesRoutes,
+} from '@tour-of-heroes/heroes/feature-shell';
 import { PageNotFoundModule } from '@tour-of-heroes/shared/ui-navigation';
 
-import { heroesDefaultRoutePath } from './../../../feature-shell/src/lib/heroes-routes';
-import { HeroesFeatureListModule } from './heroes-feature-list.module';
+import { HeroesFeaturePageModule } from './heroes-feature-page.module';
 
-describe('Heroes list feature', () => {
+describe('Heroes page feature', () => {
   beforeEach(async () => {
     view = await render(SpectacularAppComponent, {
       imports: [
         SpectacularFeatureTestingModule.withFeature({
-          featureModule: HeroesFeatureListModule,
+          featureModule: HeroesFeaturePageModule,
           featurePath,
         }),
       ],

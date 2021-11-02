@@ -17,7 +17,7 @@
     "heroes-domain": "libs/heroes/domain",
     "heroes-feature-dashboard": "libs/heroes/feature-dashboard",
     "heroes-feature-detail": "libs/heroes/feature-detail",
-    "heroes-feature-list": "libs/heroes/feature-list",
+    "heroes-feature-page": "libs/heroes/feature-page",
     "heroes-feature-shell": "libs/heroes/feature-shell",
     "heroes-ui-list": "libs/heroes/ui-list",
     "logging-data-access": "libs/logging/data-access",

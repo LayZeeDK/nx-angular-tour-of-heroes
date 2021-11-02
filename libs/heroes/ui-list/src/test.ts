@@ -2,7 +2,11 @@
 import 'zone.js';
 import 'zone.js/testing';
 
-import { addDomMatchers, setUpAngularTestingLibrary, setUpTestbed } from '@tour-of-heroes/shared/test-util-staging';
+import {
+  addDomMatchers,
+  setUpAngularTestingLibrary,
+  setUpTestbed,
+} from '@tour-of-heroes/shared/test-util-staging';
 
 declare const require: {
   context(

@@ -11,7 +11,7 @@
 }
 
 .heroes li:hover {
-  left: .1em;
+  left: 0.1em;
 }
 
 .heroes a {
@@ -20,8 +20,8 @@
   display: block;
   font-size: 1.2rem;
   background-color: #eee;
-  margin: .5rem .5rem .5rem 0;
-  padding: .5rem 0;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem 0;
   border-radius: 4px;
 }
 
@@ -44,10 +44,10 @@
 }
 
 .heroes .badge {
-  padding: .5em .6em;
+  padding: 0.5em 0.6em;
   color: white;
   background-color: #435b60;
   min-width: 16px;
-  margin-right: .8em;
+  margin-right: 0.8em;
   border-radius: 4px 0 0 4px;
 }

@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeroesUiListModule } from '@tour-of-heroes/heroes/ui-list';
 
-import { HeroesComponent } from './heroes.component';
+import { HeroesPageComponent } from './heroes-page.component';
 
 @NgModule({
-  declarations: [HeroesComponent],
+  declarations: [HeroesPageComponent],
   imports: [CommonModule, RouterModule, HeroesUiListModule],
 })
-export class HeroesModule {}
+export class HeroesPageModule {}

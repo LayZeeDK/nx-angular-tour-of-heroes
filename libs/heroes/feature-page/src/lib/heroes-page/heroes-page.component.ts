@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css'],
+  selector: 'app-heroes-page',
+  templateUrl: './heroes-page.component.html',
+  styleUrls: ['./heroes-page.component.css'],
 })
-export class HeroesComponent {
+export class HeroesPageComponent {
   heroes$: Observable<Hero[]> = this.service.getHeroes();
   selectedId = this.route.paramMap.pipe(
     map((params) => parseInt(params.get('id') ?? '-1', 10))

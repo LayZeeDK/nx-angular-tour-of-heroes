@@ -8,6 +8,7 @@
 .heroes li {
   position: relative;
   cursor: pointer;
+  display: flex;
 }
 
 .heroes li:hover {
@@ -63,12 +64,12 @@
 
 button.delete {
   position: absolute;
-  left: 210px;
-  top: 5px;
+  right: -3px;
+  top: -3px;
   background-color: white;
   color: #525252;
   font-size: 1.1rem;
-  padding: 1px 10px 3px 10px;
+  padding: 3px 10px;
 }
 
 button.delete:hover {

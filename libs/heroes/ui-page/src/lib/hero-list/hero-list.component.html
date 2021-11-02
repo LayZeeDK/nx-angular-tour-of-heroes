@@ -3,5 +3,8 @@
     <a [routerLink]="['/hero', hero.id]">
       <span class="badge">{{ hero.id }}</span> {{ hero.name }}
     </a>
+    <button class="delete" title="delete hero" (click)="onDelete(hero)">
+      x
+    </button>
   </li>
 </ul>

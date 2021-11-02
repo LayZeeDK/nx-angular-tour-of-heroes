@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
 })
 export class HeroesPageComponent {
   addedHeroes: Hero[] = [];
+  deletedHeroes: Hero[] = [];
   heroes$: Observable<Hero[]> = this.heroService.getHeroes();
   selectedId: Observable<number> = this.route.paramMap.pipe(
     map((params) => parseInt(params.get('id') ?? '', 10))
@@ -23,13 +24,22 @@ export class HeroesPageComponent {
     private route: ActivatedRoute
   ) {}
 
-  add(name: string): void {
+  onAdd(name: string): void {
     this.heroService.addHero({ name } as Hero).subscribe((hero) => {
       this.addedHeroes = [...this.addedHeroes, hero];
     });
   }
 
+  onDelete(hero: Hero): void {
+    this.deletedHeroes = [...this.deletedHeroes, hero];
+    this.heroService.deleteHero(hero.id).subscribe();
+  }
+
   allHeroes(serverHeroes: Hero[]): Hero[] {
-    return [...serverHeroes, ...this.addedHeroes];
+    const deletedHeroIds = this.deletedHeroes.map((hero) => hero.id);
+
+    return [...serverHeroes, ...this.addedHeroes].filter(
+      (hero) => !deletedHeroIds.includes(hero.id)
+    );
   }
 }

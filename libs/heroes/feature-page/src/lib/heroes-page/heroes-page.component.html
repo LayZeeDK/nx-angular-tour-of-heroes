@@ -1,10 +1,11 @@
 <h2>Heroes</h2>
 
-<app-hero-form (add)="add($event)"></app-hero-form>
+<app-hero-form (add)="onAdd($event)"></app-hero-form>
 
 <app-hero-list
   [heroes]="allHeroes((heroes$ | async) ?? [])"
   [selectedId]="(selectedId | async) ?? -1"
+  (delete)="onDelete($event)"
 ></app-hero-list>
 
 <button routerLink="/sidekicks">Go to sidekicks</button>

@@ -1,5 +1,4 @@
-// TODO: Feature Componetized like CrisisCenter
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Hero } from '@tour-of-heroes/heroes/domain';
 
 @Component({
@@ -12,4 +11,10 @@ export class HeroListComponent {
   heroes: Hero[] = [];
   @Input()
   selectedId = 0;
+  @Output()
+  delete = new EventEmitter<Hero>();
+
+  onDelete(hero: Hero) {
+    this.delete.emit(hero);
+  }
 }

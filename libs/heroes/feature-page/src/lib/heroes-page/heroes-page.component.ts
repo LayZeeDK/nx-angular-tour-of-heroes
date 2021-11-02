@@ -12,10 +12,24 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./heroes-page.component.css'],
 })
 export class HeroesPageComponent {
-  heroes$: Observable<Hero[]> = this.service.getHeroes();
-  selectedId = this.route.paramMap.pipe(
-    map((params) => parseInt(params.get('id') ?? '-1', 10))
+  addedHeroes: Hero[] = [];
+  heroes$: Observable<Hero[]> = this.heroService.getHeroes();
+  selectedId: Observable<number> = this.route.paramMap.pipe(
+    map((params) => parseInt(params.get('id') ?? '', 10))
   );
 
-  constructor(private service: HeroService, private route: ActivatedRoute) {}
+  constructor(
+    private heroService: HeroService,
+    private route: ActivatedRoute
+  ) {}
+
+  add(name: string): void {
+    this.heroService.addHero({ name } as Hero).subscribe((hero) => {
+      this.addedHeroes = [...this.addedHeroes, hero];
+    });
+  }
+
+  allHeroes(serverHeroes: Hero[]): Hero[] {
+    return [...serverHeroes, ...this.addedHeroes];
+  }
 }

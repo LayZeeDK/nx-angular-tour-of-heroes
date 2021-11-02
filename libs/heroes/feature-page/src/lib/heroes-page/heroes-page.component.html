@@ -1,7 +1,9 @@
 <h2>Heroes</h2>
 
+<app-hero-form (add)="add($event)"></app-hero-form>
+
 <app-hero-list
-  [heroes]="(heroes$ | async) ?? []"
+  [heroes]="allHeroes((heroes$ | async) ?? [])"
   [selectedId]="(selectedId | async) ?? -1"
 ></app-hero-list>
 

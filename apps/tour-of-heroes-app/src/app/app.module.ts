@@ -3,15 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
 import { InMemoryDataService } from '@tour-of-heroes/heroes/data-access';
-import { LoggingFeatureMessagesModule } from '@tour-of-heroes/logging/feature-messages';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, AppScam } from './app.component';
 
 @NgModule({
   bootstrap: [AppComponent],
-  declarations: [AppComponent],
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
@@ -22,7 +20,7 @@ import { AppComponent } from './app.component';
       dataEncapsulation: false,
     }),
     AppRoutingModule,
-    LoggingFeatureMessagesModule,
+    AppScam,
   ],
 })
 export class AppModule {

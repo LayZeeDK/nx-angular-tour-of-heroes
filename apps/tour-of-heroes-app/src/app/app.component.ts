@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, NgModule } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { LoggingFeatureMessagesModule } from '@tour-of-heroes/logging/feature-messages';
 import { slideInAnimation } from '@tour-of-heroes/shared/ui-navigation';
 
 @Component({
@@ -13,3 +14,9 @@ export class AppComponent {
     return outlet.activatedRouteData.animation;
   }
 }
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [RouterModule, LoggingFeatureMessagesModule],
+})
+export class AppScam {}

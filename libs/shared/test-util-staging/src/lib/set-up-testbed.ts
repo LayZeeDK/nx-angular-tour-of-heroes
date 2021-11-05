@@ -23,6 +23,12 @@ function patchTestbed(): void {
         ],
       });
     };
+
+    // Run at least once in case `TestBed.inject` is called without calling
+    // `TestBed.configureTestingModule`
+    beforeEach(() => {
+      testbed.configureTestingModule({});
+    });
   }
 }
 

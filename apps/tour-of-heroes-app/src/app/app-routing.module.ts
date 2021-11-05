@@ -11,7 +11,7 @@ import {
   ComposeMessageModule,
 } from '@tour-of-heroes/shared/ui-dialogs';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {
     path: 'compose',
     component: ComposeMessageComponent,

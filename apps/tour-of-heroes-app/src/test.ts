@@ -4,6 +4,7 @@ import 'zone.js/testing';
 
 import {
   addDomMatchers,
+  setUpAngularTestingLibrary,
   setUpTestbed,
 } from '@tour-of-heroes/shared/test-util-staging';
 
@@ -22,6 +23,7 @@ addDomMatchers();
 
 // First, initialize the Angular testing environment.
 setUpTestbed();
+setUpAngularTestingLibrary();
 // Then we find all the tests.
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.

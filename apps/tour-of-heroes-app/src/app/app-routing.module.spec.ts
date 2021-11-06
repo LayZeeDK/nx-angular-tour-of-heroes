@@ -1,16 +1,14 @@
 import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
-import { ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
 
-import { appRoutes } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent, AppScam } from './app.component';
 import { CoreModule } from './core.module';
 
-describe('Angular Testing Library', () => {
+describe(AppRoutingModule.name, () => {
   beforeEach(async () => {
     view = await render(AppComponent, {
-      imports: [AppScam, ComposeMessageModule, CoreModule.forRoot()],
-      routes: appRoutes,
+      imports: [AppScam, CoreModule.forRoot(), AppRoutingModule],
     });
   });
 

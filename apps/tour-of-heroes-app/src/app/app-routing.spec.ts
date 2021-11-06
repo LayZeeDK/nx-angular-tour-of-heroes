@@ -1,26 +1,15 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { render, RenderResult } from '@testing-library/angular';
 import user from '@testing-library/user-event';
-import { InMemoryDataService } from '@tour-of-heroes/heroes/data-access';
 import { ComposeMessageModule } from '@tour-of-heroes/shared/ui-dialogs';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { appRoutes } from './app-routing.module';
 import { AppComponent, AppScam } from './app.component';
+import { CoreModule } from './core.module';
 
 describe('Angular Testing Library', () => {
   beforeEach(async () => {
     view = await render(AppComponent, {
-      imports: [
-        AppScam,
-        NoopAnimationsModule,
-        ComposeMessageModule,
-        HttpClientModule,
-        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-          dataEncapsulation: false,
-        }),
-      ],
+      imports: [AppScam, ComposeMessageModule, CoreModule.forRoot()],
       routes: appRoutes,
     });
   });

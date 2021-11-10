@@ -67,7 +67,7 @@ jobs:
 
       - name: 'Merge: Test all projects'
         if: ${{ env.is-main-branch }}
-        run: yarn test --max-parallel=2
+        run: yarn test
       - name: 'PR: Test affected projects'
         if: ${{ env.is-pull-request }}
-        run: yarn affected:test --max-parallel=2
+        run: yarn affected:test

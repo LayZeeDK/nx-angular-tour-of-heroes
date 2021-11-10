@@ -4,6 +4,7 @@
   "description": "Example project from an angular.io guide.",
   "license": "MIT",
   "scripts": {
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "ng": "nx",
     "start": "ng serve",
     "build": "ng build",
@@ -27,8 +28,7 @@
     "update:check": "ng update",
     "dep-graph": "nx dep-graph",
     "workspace-schematic": "nx workspace-schematic",
-    "help": "nx help",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main"
+    "help": "nx help"
   },
   "private": true,
   "dependencies": {

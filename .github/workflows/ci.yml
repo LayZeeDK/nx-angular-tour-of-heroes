@@ -70,8 +70,8 @@ jobs:
         uses: nrwl/nx-set-shas@v2
 
       - name: 'Merge: Test all projects'
-        if: ${{ env.is-main-branch }}
+        if: ${{ env.is-main-branch == 'true' }}
         run: yarn test
       - name: 'PR: Test affected projects'
-        if: ${{ env.is-pull-request }}
+        if: ${{ env.is-pull-request == 'true' }}
         run: yarn affected:test --base=${{ env.NX_BASE }}

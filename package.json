@@ -8,7 +8,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "nx run-many --target=test --all --parallel",
+    "test": "nx run-many --target=test --all --parallel --browsers=ChromeHeadless",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "nx": "nx",

@@ -1,6 +1,8 @@
 name: Tour of Heroes CI
 
 env:
+  is-main-branch: ${{ github.ref == 'refs/heads/main' }}
+  is-pull-request: ${{ github.event_name == 'pull_request' }}
   node-version: 16.x
 
 on:
@@ -60,5 +62,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Test
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+
+      - name: 'Merge: Test all projects'
+        if: ${{ env.is-main-branch }}
         run: yarn test --max-parallel=2
+      - name: 'PR: Test affected projects'
+        if: ${{ env.is-pull-request }}
+        run: yarn affected:test --max-parallel=2

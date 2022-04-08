@@ -4,11 +4,12 @@
   "description": "Example project from an angular.io guide.",
   "license": "MIT",
   "scripts": {
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "ng": "nx",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "nx run-many --target=test --all --parallel=false --browsers=ChromeHeadless",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "nx": "nx",
@@ -16,7 +17,7 @@
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
     "affected:e2e": "nx affected:e2e",
-    "affected:test": "nx affected:test",
+    "affected:test": "nx affected:test --parallel=false --browsers=ChromeHeadless",
     "affected:lint": "nx affected:lint",
     "affected:dep-graph": "nx affected:dep-graph",
     "affected": "nx affected",
@@ -27,8 +28,7 @@
     "update:check": "ng update",
     "dep-graph": "nx dep-graph",
     "workspace-schematic": "nx workspace-schematic",
-    "help": "nx help",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main"
+    "help": "nx help"
   },
   "private": true,
   "dependencies": {

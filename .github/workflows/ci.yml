@@ -1,0 +1,77 @@
+name: Tour of Heroes CI
+
+env:
+  is-main-branch: ${{ github.ref == 'refs/heads/main' }}
+  is-pull-request: ${{ github.event_name == 'pull_request' }}
+  node-version: 16.x
+
+on:
+  pull_request: {}
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+  # ESLint and Angular-ESLint are not added yet
+  # lint:
+  #   name: Lint
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@v2
+
+  #     - uses: actions/setup-node@v2
+  #       with:
+  #         node-version: ${{ env.node-version }}
+  #         cache: yarn
+  #     - name: Install dependencies
+  #       run: yarn install
+
+  #     - name: Lint
+  #       run: yarn lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # We need to fetch all branches and commits so that Nx affected has a
+          # base to compare against
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+
+      - name: 'Merge: Test all projects'
+        if: ${{ env.is-main-branch == 'true' }}
+        run: yarn test
+      - name: 'PR: Test affected projects'
+        if: ${{ env.is-pull-request == 'true' }}
+        run: yarn affected:test --base=${{ env.NX_BASE }}
